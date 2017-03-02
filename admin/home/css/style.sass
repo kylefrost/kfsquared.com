@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Satisfy')
+
+@import 'colors'
+@import 'passphrase'
+
+@font-face
+  font-family: 'Butterfly Waltz'
+  src: url(ButterflyWaltz.ttf)
+
+
+*
+  overflow-x: hidden
+  font-family: 'Satisfy', cursive
+
+html, body
+  margin: auto
+
+ul
+  position: fixed
+  top: 0
+  width: 100%
+  &.topnav
+    list-style-type: none
+    margin: 0
+    padding: 0
+    overflow: hidden
+    background-color: $mainnavbarcolor
+    li
+      float: left
+      a
+        display: block
+        color: white
+        text-align: center
+        padding: 14px 16px
+        text-decoration: none
+        font-size: 15pt
+        &:hover:not(.active)
+          background-color: $hovernavbarcolor
+        &.active
+          background-color: $activenavbarcolor
+      &.right
+        float: right
+
+@media screen and (max-width: 600px)
+  ul.topnav li
+    &.right
+      float: none
+    float: none
+
+#mobilebar
+  position: fixed
+  top: 0
+  height: 75px
+  width: 100%
+  background-color: $mainnavbarcolor
+  margin: auto
+  color: white
+  font-size: 20pt
+  display: none
+
+.toptext
+  margin-top: auto
+  margin-bottom: auto
+  padding-left: 20px
+  line-height: 75px
+
+#mobileright
+  float: right
+  height: 75px
+  width: 75px
+  border: none
+  line-height: 85px
+  text-align: center
+  font-size: 25pt
+
+@keyframes fadedown
+  0%
+    top: -315px
+
+  100%
+    top: 75px
+
+
+@keyframes fadeup
+  0%
+    top: 75px
+
+  100%
+    top: -315px
+
+
+@media screen and (max-width: 600px)
+  #mobilebar
+    display: block
+  .up
+    top: -315px
+  .down
+    top: 75px
+  .fadeup
+    animation-name: fadeup
+    animation-duration: 0.5s
+  .fadedown
+    animation-name: fadedown
+    animation-duration: 0.5s

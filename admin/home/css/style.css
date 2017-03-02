@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css?family=Satisfy");
+.html {
+  overflow: hidden; }
+
+.background {
+  background-image: url("../img/hero2.jpg");
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100vh; }
+
+.center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 75px;
+  text-align: center; }
+
+input[type="password"] {
+  border-radius: 0;
+  color: white;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: none;
+  height: 75px;
+  width: 70%;
+  font-size: 25pt;
+  border-bottom: 3px solid #e7dc97;
+  float: left;
+  background-color: transparent;
+  font-family: "ButterflyWaltz", cursive; }
+  input[type="password"]::-webkit-input-placeholder {
+    color: white;
+    opacity: 0.5; }
+  input[type="password"]:-moz-placeholder {
+    color: white;
+    opacity: 0.5; }
+  input[type="password"]::-moz-placeholder {
+    color: white;
+    opacity: 0.5; }
+  input[type="password"]:-ms-input-placeholder {
+    color: white;
+    opacity: 0.5; }
+  input[type="password"]:focus {
+    outline: none; }
+
+button[type="submit"] {
+  height: 75px;
+  width: 25%;
+  border: 3px solid #e7dc97;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent; }
+  button[type="submit"]:hover {
+    background-color: #e7dc97; }
+
+.lockbutton.fa {
+  color: #e7dc97;
+  font-size: 25pt;
+  padding-top: 5px; }
+
+.question {
+  height: 50px;
+  width: 50px;
+  color: #e7dc97;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  line-height: 50px; }
+
+#question {
+  cursor: pointer; }
+
+@media screen and (max-width: 750px) {
+  .center {
+    width: 85%;
+    height: 60px; }
+
+  button[type="submit"] {
+    height: 60px; }
+
+  input[type="password"] {
+    height: 60px;
+    font-size: 20pt; }
+
+  .lockbutton.fa {
+    font-size: inherit; }
+
+  .question {
+    font-size: 15pt; } }
+@font-face {
+  font-family: "Butterfly Waltz";
+  src: url(ButterflyWaltz.ttf); }
+* {
+  overflow-x: hidden;
+  font-family: "Satisfy", cursive; }
+
+html, body {
+  margin: auto; }
+
+ul {
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; }
+    ul.topnav li {
+      float: left; }
+      ul.topnav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 15pt; }
+        ul.topnav li a:hover:not(.active) {
+          background-color: #111; }
+        ul.topnav li a.active {
+          background-color: #4caf50; }
+      ul.topnav li.right {
+        float: right; }
+
+@media screen and (max-width: 600px) {
+  ul.topnav li {
+    float: none; }
+    ul.topnav li.right {
+      float: none; } }
+#mobilebar {
+  position: fixed;
+  top: 0;
+  height: 75px;
+  width: 100%;
+  background-color: #333;
+  margin: auto;
+  color: white;
+  font-size: 20pt;
+  display: none; }
+
+.toptext {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 20px;
+  line-height: 75px; }
+
+#mobileright {
+  float: right;
+  height: 75px;
+  width: 75px;
+  border: none;
+  line-height: 85px;
+  text-align: center;
+  font-size: 25pt; }
+
+@keyframes fadedown {
+  0% {
+    top: -315px; }
+  100% {
+    top: 75px; } }
+@keyframes fadeup {
+  0% {
+    top: 75px; }
+  100% {
+    top: -315px; } }
+@media screen and (max-width: 600px) {
+  #mobilebar {
+    display: block; }
+
+  .up {
+    top: -315px; }
+
+  .down {
+    top: 75px; }
+
+  .fadeup {
+    animation-name: fadeup;
+    animation-duration: 0.5s; }
+
+  .fadedown {
+    animation-name: fadedown;
+    animation-duration: 0.5s; } }
+
+/*# sourceMappingURL=style.css.map */

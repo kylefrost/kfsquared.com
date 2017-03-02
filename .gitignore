@@ -1,0 +1,11 @@
+.sass-cache/
+credentials.php
+.htaccess
+*.swp
+*.css.map
+*.png
+*.jpg
+*.jpeg
+*.PNG
+*.JPG
+*.JPEG

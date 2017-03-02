@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Ledger')
+
+@import 'colors'
+@import 'variables'
+@import 'passphrase'
+@import 'sections'
+@import 'modal'
+@import 'bride_and_groom'
+@import 'registry'
+@import 'contact'
+@import 'hamburgers'
+
+.hamburger-box
+  overflow: visible
+.hamburger-inner
+  overflow: visible
+
+@font-face
+  font-family: 'Butterfly Waltz'
+  src: url(ButterflyWaltz.ttf)
+
+*
+  overflow-x: hidden
+
+html, body
+  font-family: 'Dancing Script', cursive
+  margin: auto
+
+ul
+  position: fixed
+  top: 0
+  width: 100%
+
+  &.topnav
+    list-style-type: none
+    margin: 0
+    padding: 0
+    overflow: hidden
+    z-index: 999999
+    background-color: $main_nav_color
+    border-bottom: 1px solid black
+
+    li
+      float: left
+      a
+        display: block
+        color: $main_text_color
+        text-align: center
+        padding: 14px 16px
+        text-decoration: none
+        font-size: 15pt
+        -webkit-transition: background-color 0.3s
+        transition: background-color 0.3s
+        &:hover:not(.active)
+          background-color: $hover_nav_color
+        &.active
+          background-color: $active_nav_color
+          color: $main_nav_color
+      &.right
+        float: right
+
+@media screen and (max-width: $media_screen)
+  ul.topnav li
+    &.right
+      float: none
+    float: none
+
+#mobilebar
+  position: fixed
+  top: 0
+  height: 75px
+  width: 100%
+  background-color: $main_nav_color
+  margin: auto
+  color: $main_text_color
+  font-size: 20pt
+  display: none
+  z-index: 99999999
+  border-bottom: 1px solid black
+
+.toptext
+  margin-top: auto
+  margin-bottom: auto
+  padding-left: 20px
+  line-height: 75px
+
+#mobileright
+  float: right
+  height: 75px
+  width: 75px
+  border: none
+  line-height: 75px
+  text-align: center
+  font-size: 25pt
+  overflow-x: visible
+
+
+@keyframes fadedown
+  0%
+    top: -315px
+
+  100%
+    top: 75px
+
+
+@keyframes fadeup
+  0%
+    top: 75px
+
+  100%
+    top: -315px
+
+
+@media screen and (max-width: $media_screen)
+  #mobilebar
+    display: block
+  .up
+    top: -315px
+  .down
+    top: 75px
+  .fadeup
+    animation-name: fadeup
+    animation-duration: 0.5s
+  .fadedown
+    animation-name: fadedown
+    animation-duration: 0.5s

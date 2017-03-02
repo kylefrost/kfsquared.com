@@ -1,0 +1,76 @@
+#registry-top-text
+  text-align: center
+  font-size: 70pt
+  color: $registry_text_color
+  margin-top: 75px
+  padding-bottom: 10px
+
+#registry-divider
+  left: 20%
+  right: 20%
+  height: 1px
+  margin: 0px
+  margin-top: 10px
+  position: absolute
+  border-bottom: 2px solid $registry_text_color
+
+#registry-text
+  position: relative
+  font-family: 'Ledger', serif
+  font-size: 15pt
+  text-align: justify
+  width: 60%
+  left: 50%
+  transform: translateX(-50%)
+  color: $registry_main_text_color
+  padding-top: 10px
+  margin-bottom: 30px
+
+.min-full-height
+  min-height: 100vh
+
+.move-right
+  padding-left: 25px
+
+.registry-sign-off
+  text-align: right
+  padding-right: 25px
+
+#registry-links
+  text-align: center
+  width: 40%
+  margin-left: auto
+  margin-right: auto
+  display: block
+  overflow: visible
+
+.registry-link
+  position: relative
+  width: 100%
+
+.svg
+  width: 100%
+  fill: $registry_text_color
+  -webkit-transition: fill 0.3s
+  transition: fill 0.3s
+
+#target
+  @extend .svg
+  &:hover
+    fill: #e60024
+
+#bedbathbeyond
+  @extend .svg
+  &:hover
+    fill: #273691
+
+@media screen and (max-width: $media_screen)
+  #registry-text
+    width: 90%
+    font-size: 12pt
+
+  #registry-top-text
+    margin-top: 90px
+
+  #registry-links
+    width: 90%
