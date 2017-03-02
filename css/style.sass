@@ -19,8 +19,14 @@
   font-family: 'Butterfly Waltz'
   src: url(ButterflyWaltz.ttf)
 
+//*:not(.modal-header:span):not(.modal-header:h2):not(.modal-body:p):not(.carousel)
 *
   overflow-x: hidden
+  margin: auto
+
+*:not(.is-selected):not(img):not(svg):not(path):not(g):not(#nav):not(.modal-header:span):not(.modal-header:h2):not(.modal-body:p)
+  -webkit-transition: all 0.3s
+  transition: all 0.3s
 
 html, body
   font-family: 'Dancing Script', cursive
