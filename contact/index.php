@@ -12,7 +12,7 @@
         <?php include('../templates/navbar.php'); ?>
         <div class="section-ring min-full-height">
             <div id="contact-top-text">Talk to us<div id="registry-divider">&nbsp;</div></div>
-            <div id="contact-lower-top-text">Still have questions? Send us a message below.</div>
+            <div id="contact-lower-top-text" style="overflow: visible;">Still have questions? Send us a message below.</div>
             <div id="form-container">
                 <?php if ($_SERVER['REQUEST_METHOD'] === "POST") {
                         include('../php/credentials.php');
