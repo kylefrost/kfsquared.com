@@ -223,8 +223,6 @@ h2 {
   height: auto; }
 
 .story, #story_left, #story_right {
-  padding: none;
-  margin: none;
   position: relative;
   width: 50vw;
   height: auto; }
@@ -236,7 +234,7 @@ h2 {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-image: url("../img/our_story.jpg"); }
+  background-image: url("/img/our_story.jpg"); }
 
 #story_right {
   float: right; }
@@ -292,7 +290,7 @@ label {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url("../img/our_story_mobile.jpg");
+    background-image: url("/img/our_story_mobile.jpg");
     font-size: 20px;
     width: 100vw;
     color: white; }
@@ -1049,13 +1047,12 @@ label {
 @font-face {
   font-family: "Butterfly Waltz";
   src: url(ButterflyWaltz.ttf); }
-* {
-  overflow-x: hidden;
-  margin: auto; }
+*:not(.flickity-slider):not(#registry-text):not(.hamburger):not(.hamburger-box):not(.hamburger-inner) {
+  overflow-x: hidden; }
 
-*:not(.is-selected):not(img):not(svg):not(path):not(g):not(#nav):not(.modal-header:span):not(.modal-header:h2):not(.modal-body:p) {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
+*:not(.is-selected):not(img):not(#nav):not(.modal-header span):not(.modal-header h2):not(.modal-body p):not(.flickity-slider):not(.modal):not(.modal-content):not(#mobileright):not(.hamburger):not(.hamburger-box):not(.hamburger-inner) {
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear; }
 
 html, body {
   font-family: "Dancing Script", cursive;

@@ -19,14 +19,13 @@
   font-family: 'Butterfly Waltz'
   src: url(ButterflyWaltz.ttf)
 
-//*:not(.modal-header:span):not(.modal-header:h2):not(.modal-body:p):not(.carousel)
-*
+*:not(.flickity-slider):not(#registry-text):not(.hamburger):not(.hamburger-box):not(.hamburger-inner)
   overflow-x: hidden
-  margin: auto
 
-*:not(.is-selected):not(img):not(svg):not(path):not(g):not(#nav):not(.modal-header:span):not(.modal-header:h2):not(.modal-body:p)
-  -webkit-transition: all 0.3s
-  transition: all 0.3s
+
+*:not(.is-selected):not(img):not(#nav):not(.modal-header span):not(.modal-header h2):not(.modal-body p):not(.flickity-slider):not(.modal):not(.modal-content):not(#mobileright):not(.hamburger):not(.hamburger-box):not(.hamburger-inner)
+  -webkit-transition: all 0.3s linear
+  transition: all 0.3s linear
 
 html, body
   font-family: 'Dancing Script', cursive
