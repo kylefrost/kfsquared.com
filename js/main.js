@@ -64,6 +64,12 @@ window.onclick = function(event) {
     }
 }
 
+window.ontouchstart = function(event) {
+    if (event.target == document.getElementById("modal")) {
+        helpDown();
+    }
+}
+
 if($(".carousel").length) {
     var flkty = new Flickity('.carousel', {
         setGallerySize: false,

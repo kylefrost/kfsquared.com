@@ -102,7 +102,7 @@
                     rename($file_tmp, $new_dir);
                 }
 
-                if(!empty($img_err = resize_image($new_dir, $desired_dir . 'resized/' . $file_name, 1000, 1000))) {
+                if(!empty($img_err = resize_image($new_dir, $desired_dir . 'resized/' . $file_name, 900, 900))) {
                     $errors[] = $img_err;
                 }
 
