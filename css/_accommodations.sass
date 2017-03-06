@@ -1,0 +1,51 @@
+#acc-top-text
+  text-align: center
+  font-size: 70pt
+  color: #C6AB9F
+  margin-top: 75px
+  padding-bottom: 10px
+
+.acc-lodging
+  width: 100vw
+  padding-top: 30px
+
+.lodging
+  margin: 0
+  position: relative
+  width: 50%
+
+.lodging-left
+  @extend .lodging
+  float: left
+
+.lodging-right
+  @extend .lodging
+  float: left
+
+.lodging-title
+  text-align: center
+  font-size: 25pt
+  color: $registry_text_color
+
+.extra-options
+  padding-left: 25px
+  padding-right: 25px
+
+.lodging-text
+  padding: 30px
+  text-align: center
+  font-size: 12pt
+  font-family: 'Ledger', serif
+  color: $registry_main_text_color
+  & a
+    color: $registry_main_text_color
+
+@media screen and (max-width: $media_screen)
+  #acc-top-text
+    font-size: 40pt
+
+  #lodging-left
+    width: 100%
+
+  #lodging-right
+    width: 100%
