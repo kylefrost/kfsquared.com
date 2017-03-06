@@ -92,7 +92,35 @@
                 </div>
                 <div class="lodging-right">
                     <div class="lodging-title">Explore Tallahassee<div id="registry-divider"></div></div>
-                    <div class="lodging-text"></div>
+                    <div class="lodging-text what-to-do">
+                        Alfred B. Maclay Gardens State Park
+                        <br>
+                        <a href="https://www.floridastateparks.org/park/Maclay-Gardens" target="_blank">More info</a>
+                        <br><br>
+                        Museum of Florida History
+                        <br>
+                        <a href="http://museumoffloridahistory.com/" target="_blank">More info</a>
+                        <br><br>
+                        Mission San Luis
+                        <br>
+                        <a href="https://www.missionsanluis.org/index.cfm" target="_blank">More info</a>
+                        <br><br>
+                        Florida State Capitol &amp; Museum
+                        <br>
+                        <a href="http://www.floridacapitol.myflorida.com/" target="_blank">More info</a>
+                        <br><br>
+                        Tallahassee Museum
+                        <br>
+                        <a href="http://tallahasseemuseum.org/" target="_blank">More info</a>
+                        <br><br>
+                        Tallahassee Automobile Museum
+                        <br>
+                        <a href="https://www.tacm.com/" target="_blank">More info</a>
+                        <br><br>
+                        Cascades Park
+                        <br>
+                        <a href="https://www.talgov.com/parks/parks-cascades-events.aspx" target="_blank">More info</a>
+                    </div>
                 </div>
             </div>
         </div>

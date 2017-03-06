@@ -83,7 +83,6 @@
             $lower_file_extension = strtolower($file_extension);
 
             $desired_dir = dirname(__DIR__) . "/files/";
-            // $file_name = "";
 
             if (empty($errors)) {
                 if (!is_dir($desired_dir)) {

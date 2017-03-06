@@ -125,6 +125,13 @@ button[type="submit"] {
   background-repeat: no-repeat;
   background-image: url("/img/hero_large.jpg"); }
 
+.section-wedding {
+  height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("/img/wedding.jpg"); }
+
 @media screen and (max-width: 700px) {
   .section-hero {
     background-image: url("/img/hero.jpg"); } }
@@ -522,6 +529,10 @@ label {
   padding-left: 25px;
   padding-right: 25px; }
 
+.what-to-do a {
+  font-style: italic;
+  font-size: 11pt; }
+
 .lodging-text {
   padding: 30px;
   text-align: center;
@@ -535,10 +546,10 @@ label {
   #acc-top-text {
     font-size: 40pt; }
 
-  #lodging-left {
+  .lodging-left {
     width: 100%; }
 
-  #lodging-right {
+  .lodging-right {
     width: 100%; } }
 #registry-top-text {
   text-align: center;

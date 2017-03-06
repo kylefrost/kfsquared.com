@@ -10,7 +10,7 @@
     <body>
         <?php include('../templates/google.php'); ?>
         <?php include('../templates/navbar.php'); ?>
-        <div class="section-hero min-full-height">
+        <div class="section-wedding min-full-height">
             <div id="wedding-top-text" style="overflow: visible;">10.14.17</div>
             <div id="down-arrow" style="overflow: visible;">
                 <i class="fa fa-arrow-circle-down" style="overflow: visible;" aria-hidden="true"></i>
