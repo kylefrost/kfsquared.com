@@ -317,7 +317,7 @@ label {
   .carousel img {
     opacity: 1; } }
 #wedding-top-text {
-  font-size: 25vw;
+  font-size: 15vw;
   color: #f0e9e6;
   top: 50%;
   left: 50%;
@@ -381,9 +381,9 @@ label {
     color: #B38F7F; }
 
 .wedding-timeline ul {
-  position: initial;
-  top: initial;
-  width: initial;
+  position: static;
+  top: auto;
+  width: auto;
   padding: 0;
   overflow: visible; }
   .wedding-timeline ul li {
@@ -538,9 +538,9 @@ label {
   text-align: center;
   font-size: 12pt;
   font-family: "Ledger", serif;
-  color: #B38F7F; }
+  color: #6B554C; }
   .lodging-text a {
-    color: #B38F7F; }
+    color: #6B554C; }
 
 @media screen and (max-width: 700px) {
   #acc-top-text {
@@ -692,6 +692,47 @@ label {
     margin-top: 20px; }
     #form-container input[type="text"], #form-container textarea {
       width: 90%; } }
+#old-browser-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); }
+
+#old-main-text {
+  font-size: 10vw;
+  color: #B38F7F;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+  position: relative; }
+
+#old-browser-suggestion {
+  text-align: center;
+  position: relative;
+  color: #B38F7F;
+  font-size: 2vw;
+  font-family: "Ledger", serif; }
+  #old-browser-suggestion a {
+    color: #C6AB9F; }
+
+.four-oh-four {
+  height: auto;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute; }
+  .four-oh-four img {
+    width: 100%;
+    text-align: center; }
+
+@media screen and (max-width: 700px) {
+  .four-oh-four {
+    width: 100%;
+    left: 0;
+    transform: translate(0%, -50%); } }
 /*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers

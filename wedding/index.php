@@ -11,7 +11,7 @@
         <?php include('../templates/google.php'); ?>
         <?php include('../templates/navbar.php'); ?>
         <div class="section-wedding min-full-height">
-            <div id="wedding-top-text" style="overflow: visible;">10.14.17</div>
+            <div id="wedding-top-text" style="overflow: visible;">#frostyourself</div>
             <div id="down-arrow" style="overflow: visible;">
                 <i class="fa fa-arrow-circle-down" style="overflow: visible;" aria-hidden="true"></i>
             </div>
@@ -37,7 +37,7 @@
                     <li style="overflow: visible;">
                         <div style="overflow: visible;">
                             <time>5:00 PM</time><br>
-                            Ceremony begins under <i>the Portal</i>. Attire is semi-formal.
+                            Ceremony begins under <i>the Portal</i>. Attire is semi-formal. We ask that you please refrain from using cell phones or taking pictures at this time.
                         </div>
                     </li>
                     <li style="overflow: visible;">
@@ -49,7 +49,7 @@
                     <li style="overflow: visible;">
                         <div style="overflow: visible;">
                             <time>6:30 PM</time><br>
-                            Reception begins with introduction of wedding party in Mission Room banquet hall.
+                            Reception begins with introduction of wedding party in Mission Room banquet hall. For any pictures taken and posted online, please use the hashtag <i>"#frostyourself"</i> so that everyone can find them!
                         </div>
                     </li>
                     <li style="overflow: visible;">
