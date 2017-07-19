@@ -14,7 +14,7 @@
             if(!$_SESSION['loggedin']) {
                 include('../templates/passcode.php');
             } else {
-                include('../templates/placeholder_rsvp.php');
+                include('../templates/rsvp.php');
             }
         ?>
         <script src="/js/main.js"></script>

@@ -19,7 +19,7 @@ body {
   bottom: 0;
   left: 0;
   width: 50%;
-  height: 75px;
+  height: 120px;
   text-align: center; }
 
 input[type="password"] {
@@ -692,6 +692,77 @@ label {
     margin-top: 20px; }
     #form-container input[type="text"], #form-container textarea {
       width: 90%; } }
+#rsvp_title {
+  color: #C6AB9F;
+  font-size: 40pt; }
+
+#rsvp_center {
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  overflow: visible !important; }
+
+#rsvp-form {
+  color: #C6AB9F;
+  font-size: 25pt; }
+
+#rsvp-table td {
+  padding: 10px; }
+
+#submitRSVP {
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid #C6AB9F;
+  color: #B38F7F;
+  border-radius: 0px;
+  cursor: pointer;
+  font-family: "Ledger", serif;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 100px; }
+  #submitRSVP:hover {
+    border: 2px solid #B38F7F; }
+  #submitRSVP:active {
+    background-color: #B38F7F;
+    color: black; }
+
+.rsvp-checkbox input[type=checkbox] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid #B38F7F;
+  background-color: #B38F7F;
+  color: black;
+  padding: 5px;
+  width: 35px;
+  text-align: center; }
+  .rsvp-checkbox input[type=checkbox]:hover {
+    border: 2px solid black; }
+  .rsvp-checkbox input[type=checkbox]:before {
+    content: "No"; }
+  .rsvp-checkbox input[type=checkbox]:checked {
+    color: white; }
+    .rsvp-checkbox input[type=checkbox]:checked:before {
+      content: "Yes"; }
+    .rsvp-checkbox input[type=checkbox]:checked:hover {
+      border: 2px solid white; }
+
+#success-message {
+  color: white;
+  font-size: 20pt; }
+
+@media screen and (max-width: 700px) {
+  .rsvp-checkbox input[type=checkbox] {
+    border-radius: 0;
+    height: 28px; }
+
+  #submitRSVP {
+    -webkit-appearance: none;
+    appearance: none; } }
 #old-browser-container {
   position: absolute;
   top: 50%;
@@ -1337,7 +1408,7 @@ label {
 @font-face {
   font-family: "Butterfly Waltz";
   src: url(ButterflyWaltz.ttf); }
-*:not(.flickity-slider):not(#registry-text):not(.hamburger):not(.hamburger-box):not(.hamburger-inner) {
+*:not(.flickity-slider):not(#registry-text):not(.hamburger):not(.hamburger-box):not(.hamburger-inner):not(#success-message):not(#registry-divider) {
   overflow-x: hidden; }
 
 *:not(#nav):not(.hamburger-inner):not(.modal):not(.modal-content):not(.is-selected):not(img):not(.flickity-slider):not(g):not(path) {

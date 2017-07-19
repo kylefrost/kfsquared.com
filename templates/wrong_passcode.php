@@ -1,21 +1,8 @@
-<?php
-    $passphrase_error = false;
-
-    if ($_SERVER['REQUEST_METHOD'] === "POST") {
-        $passphrase = $_POST['passphrase'];
-        include('../php/login.php');
-        $passphrase_error = login_using_passphrase($passphrase);
-
-        if (!$passphrase_error) {
-            header("Refresh:0");
-        }
-    }
-?>
 <div class="background">
     <div class="center">
-        <?php if ($passphrase_error) { echo "<div class=\"success-message\" style=\"color:red;\">Sorry, we didn't recognize that passcode."; } ?>
+        <div class="wrong-passcode-text">Sorry, that passcode wasn't found.</div>
         <form name="passphraseForm" id="passphraseForm" method="POST">
-            <input type="password" name="passphrase" id="passphrase" placeholder="Enter code..." id="passphrase">
+            <input type="password" name="passphrase" placeholder="Enter code..." id="passphrase">
             <button type="submit" id="submit"><i class="lockbutton fa fa-lock"></i></button>
         </form>
     </div>
@@ -34,3 +21,25 @@
         <i id="help" onclick="helpUp()" class="fa fa-question-circle"></i>
     </div>
 </div>
+<script>
+/*
+    $("#passphraseForm").submit(function(e) {
+        e.preventDefault();
+
+        $.ajax({
+            type: "POST",
+            url: "../php/login.php",
+            data: $("#passphraseForm").serialize(),
+            success: function(response) {
+                console.log(response);
+                if (response.auth) {
+                    location.reload(true);
+                }
+            },
+            error: function(response) {
+                console.log(response);
+            }
+        });
+    });
+ */
+</script>

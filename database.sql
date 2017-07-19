@@ -5,32 +5,23 @@ CREATE DATABASE IF NOT EXISTS kfsquared;
 USE kfsquared;
 
 CREATE TABLE IF NOT EXISTS `passphrases` (
-    `id` INT NOT NULL AUTO_INCREMENT,
+    `passphrase_id` INT NOT NULL AUTO_INCREMENT,
+    `family_id` INT NOT NULL,
     `passphrase` VARCHAR(10) NOT NULL,
     `has_logged_in` BOOLEAN NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (passphrase_id)
 );
 
-CREATE TABLE IF NOT EXISTS `rsvps` (
-    `id` INT NOT NULL AUTO_INCREMENT,
-    `inviteeid` INT NOT NULL,
-    `passphraseid` INT NOT NULL,
-    `is_coming` BOOLEAN NOT NULL,
-    `plus_one_coming` BOOLEAN,
-    PRIMARY KEY (id)
-);
-
-CREATE TABLE IF NOT EXISTS `invitees` (
-    `id` INT NOT NULL AUTO_INCREMENT,
-    `passphraseid` INT NOT NULL,
-    `name` VARCHAR(255) NOT NULL,
-    `has_plus_one` BOOLEAN NOT NULL,
-    PRIMARY KEY (id)
-);
-
-CREATE TABLE IF NOT EXISTS `admins` (
-    `id` INT NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(255) NOT NULL,
-    `passcode` VARCHAR(255) NOT NULL,
-    PRIMARY KEY (id)
+CREATE TABLE IF NOT EXISTS `invites` (
+    `person_id` INT NOT NULL AUTO_INCREMENT,
+    `family_id` INT NOT NULL,
+    `first_name` VARCHAR(100) NOT NULL,
+    `last_name` VARCHAR(100) NOT NULL,
+    `web` INT NOT NULL,
+    `web_count` INT NOT NULL,
+    `phone` INT NOT NULL,
+    `phone_count` INT NOT NULL,
+    `date_rsvp` DATE,
+    `rsvp` INT,
+    PRIMARY KEY (person_id)
 );

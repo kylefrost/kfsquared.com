@@ -1,38 +1,36 @@
 <?php
-    include("credentials.php");
 
-    session_start();
-    $error = '';
-    $auth = false;
+    function login_using_passphrase($passphrase_in) {
+        session_start();
+        $error = false;
 
-    if (empty($_POST['passphrase'])) {
-        $error = "No passphrase given.";
-    } else {
-        $passphrase = $_POST['passphrase'];
-
-        $connection = mysql_connect($DBSERV, $DBUSER, $DBPASS);
-
-        $passphrase = stripslashes($passphrase);
-        $passphrase = mysql_real_escape_string($passphrase);
-
-        $db = mysql_select_db($DBDATA, $connection);
-        $query = mysql_query("select * from passphrases where passphrase='$passphrase'", $connection);
-        $row = mysql_fetch_assoc($query);
-        $rows = mysql_num_rows($query);
-
-        if ($rows == 1) {
-            $_SESSION['passphrase'] = $passphrase;
-            $login_session = $row['passphrase'];
-            $_SESSION['rsvp'] = $login_session;
-            $_SESSION['loggedin'] = true;
-            $auth = true;
+        if (empty($passphrase_in)) {
+            $error = true;
         } else {
-            $error = "Passphrase is invalid.";
+            include("credentials.php");
+            $passphrase_conn = mysql_connect($DBSERV, $DBUSER, $DBPASS);
+            $db = mysql_select_db($DBDATA, $passphrase_conn);
+
+            $passphrase_in = stripslashes($passphrase_in);
+
+            $passphrase_sql = "select * from passphrases where passphrase='$passphrase_in'";
+            $query = mysql_query($passphrase_sql, $passphrase_conn);
+            $row = mysql_fetch_assoc($query);
+            $rows = mysql_num_rows($query);
+
+            if ($rows == 1) {
+                $_SESSION['passphrase'] = $passphrase_in;
+                $pass_login_session = $row['passphrase'];
+                $_SESSION['rsvp'] = $pass_login_session;
+                $_SESSION['loggedin'] = true;
+                $_SESSION['family_id'] = $row['family_id'];
+            } else {
+                $error = true;
+            }
+
+            mysql_close($passphrase_conn);
         }
 
-        mysql_close($connection);
+        return $error;
     }
-
-    header('Content-Type: application/json');
-    echo json_encode(array('error' => $error, 'auth' => $auth));
 ?>

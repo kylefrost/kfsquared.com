@@ -9,6 +9,7 @@
     
     $passphrase_check = $_SESSION['passphrase'];
     $ses_sql = mysql_query("select passphrase from passphrases where passphrase='$passphrase_check'", $connection);
+    echo mysql_error();
     $row = mysql_fetch_assoc($ses_sql);
 
     $login_session = $row['passphrase'];
