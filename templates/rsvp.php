@@ -1,7 +1,9 @@
 <?php
     // If request on page is POST
-    
-    if ($_SERVER['REQUEST_METHOD'] === "POST") {
+    $is_set_rsvp_post = false;
+
+    if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['rsvp_person_ids'])) {
+        $is_set_rsvp_post = true;
         $rsvp_err = false;
         $person_ids = explode(',', $_POST['rsvp_person_ids']);
         $sql = 'UPDATE invites SET rsvp = CASE WHEN person_id IN ( ';
@@ -38,6 +40,8 @@
 
         $sql = $sql . ') THEN 2 ELSE rsvp END;';
 
+        echo $sql;
+
         $update_conn = mysql_connect($DBSERV, $DBUSER, $DBPASS);
 
         $update_db =  mysql_select_db($DBDATA, $update_conn);
@@ -71,7 +75,7 @@
     <div id="rsvp_center">
         <div id="rsvp_title">Your Invites</div>
         <div id="registry-divider">&nbsp;</div><br />
-        <?php if($_SERVER['REQUEST_METHOD'] === "POST") { if(!$rsvp_err) { echo "<br /><div id=\"success-message\">Thank you for your RSVP.</div><br />"; } } ?>
+        <?php if($is_set_rsvp_post) { if(!$rsvp_err) { echo "<br /><div id=\"success-message\">Thank you for your RSVP.</div><br />"; } } ?>
         <form name="rsvp-form" id="rsvp-form" method="POST">
             <center>
                 <table id="rsvp-table">

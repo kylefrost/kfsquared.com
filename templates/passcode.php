@@ -1,16 +1,3 @@
-<?php
-    $passphrase_error = false;
-
-    if ($_SERVER['REQUEST_METHOD'] === "POST") {
-        $passphrase = $_POST['passphrase'];
-        include('../php/login.php');
-        $passphrase_error = login_using_passphrase($passphrase);
-
-        if (!$passphrase_error) {
-            header("Refresh:0");
-        }
-    }
-?>
 <div class="background">
     <div class="center">
         <?php if ($passphrase_error) { echo "<div class=\"success-message\" style=\"color:red;\">Sorry, we didn't recognize that passcode."; } ?>

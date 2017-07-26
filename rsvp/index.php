@@ -1,4 +1,12 @@
 <?php
+    $passphrase_error = false;
+
+    if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['passphrase'])) {
+        $passphrase = $_POST['passphrase'];
+        include('../php/login.php');
+        $passphrase_error = login_using_passphrase($passphrase);
+    }
+
     include("../php/session.php");
 ?>
 <!DOCTYPE html>
