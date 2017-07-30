@@ -755,6 +755,16 @@ label {
   color: white;
   font-size: 20pt; }
 
+.guest-textbox {
+  border: none;
+  appearance: none;
+  outline: none;
+  padding-left: 5px;
+  width: 75%;
+  border-radius: none;
+  font-family: "Dancing Script", cursive;
+  font-size: 25pt; }
+
 @media screen and (max-width: 700px) {
   .rsvp-checkbox input[type=checkbox] {
     border-radius: 0;

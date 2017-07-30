@@ -1,4 +1,5 @@
 .sass-cache/
+create_invites.sql
 credentials.php
 .htaccess
 *.swp

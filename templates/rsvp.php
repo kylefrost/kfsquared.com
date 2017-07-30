@@ -40,13 +40,25 @@
 
         $sql = $sql . ') THEN 2 ELSE rsvp END;';
 
-        echo $sql;
+        
+        $guest_sql = '';
+
+        foreach($person_ids as $person_id) {
+            $person_id_post_string = "guest$person_id";
+            if (isset($_POST[$person_id_post_string])) {
+                $guest_sql = $guest_sql . "UPDATE invites SET first_name = '$_POST[$person_id_post_string]' WHERE person_id = $person_id;";
+            }
+        }
 
         $update_conn = mysql_connect($DBSERV, $DBUSER, $DBPASS);
 
         $update_db =  mysql_select_db($DBDATA, $update_conn);
         
         $update_query = mysql_query($sql, $update_conn);
+
+        if (!empty($guest_sql)) {
+            $guest_query = mysql_query($guest_sql, $update_conn);
+        }
 
         mysql_close($update_conn);
 
@@ -81,7 +93,7 @@
                 <table id="rsvp-table">
                     <?php
                         foreach($rsvp_arr as $rsvp_row_) {
-                            echo "<tr><td style=\"padding-right: 30px\">" . $rsvp_row_['first_name'] . "</td><td class=\"rsvp-checkbox\"><input type=\"checkbox\" name=\"" . $rsvp_row_['person_id'] . "\" id=\"" . $rsvp_row_['person_id'] . "\" value=\"" . $rsvp_row_['person_id'] . "\" " . (($rsvp_row_['rsvp'] == '1') ? 'checked' : '') . "></td></tr>";
+                            echo "<tr><td style=\"padding-right: 30px\">" . (empty($rsvp_row_['last_name']) ? "<input class=\"guest-textbox\" type=\"text\" value=\"" . $rsvp_row_['first_name'] . "\" name=\"guest" . $rsvp_row_['person_id'] . "\">" : $rsvp_row_['first_name']) . "</td><td class=\"rsvp-checkbox\"><input type=\"checkbox\" name=\"" . $rsvp_row_['person_id'] . "\" id=\"" . $rsvp_row_['person_id'] . "\" value=\"" . $rsvp_row_['person_id'] . "\" " . (($rsvp_row_['rsvp'] == '1') ? 'checked' : '') . "></td></tr>";
                         }
                     ?>
                     <tr><td colspan="2"><input id="submitRSVP" type="submit" value="RSVP"></td></tr>
