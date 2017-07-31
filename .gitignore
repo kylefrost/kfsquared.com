@@ -1,4 +1,6 @@
 .sass-cache/
+list.csv
+create_list.py
 create_invites.sql
 credentials.php
 .htaccess
