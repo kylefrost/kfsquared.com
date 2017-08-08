@@ -35,7 +35,7 @@ input[type="password"] {
   border-bottom: 3px solid #f0e9e6;
   float: left;
   background-color: transparent;
-  font-family: "ButterflyWaltz", cursive; }
+  font-family: "Dancing Script", cursive; }
   input[type="password"]::-webkit-input-placeholder {
     color: white;
     opacity: 0.5; }
@@ -322,6 +322,7 @@ label {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   position: absolute;
   text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.45); }
@@ -332,6 +333,7 @@ label {
   font-size: 40pt;
   left: 50%;
   -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
   transform: translateX(-50%);
   position: absolute;
   text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.45); }
@@ -612,6 +614,7 @@ label {
   width: 100%;
   fill: #C6AB9F;
   -webkit-transition: fill 0.3s;
+  -moz-transition: fill 0.3s;
   transition: fill 0.3s; }
 
 #target:hover {
@@ -665,7 +668,8 @@ label {
     background-color: transparent;
     font-family: "Ledger", serif;
     overflow: visible;
-    -webkit-appearance: none; }
+    -webkit-appearance: none;
+    -moz-appearance: none; }
     #form-container input[type="text"]:focus, #form-container textarea:focus {
       border: 2px solid black; }
   #form-container textarea {
@@ -733,6 +737,7 @@ label {
 
 .rsvp-checkbox input[type=checkbox] {
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border: 2px solid #B38F7F;
   background-color: #B38F7F;
@@ -772,13 +777,15 @@ label {
 
   #submitRSVP {
     -webkit-appearance: none;
+    -moz-appearance: none;
     appearance: none; } }
 #old-browser-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%); }
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%); }
 
 #old-main-text {
   font-size: 10vw;
@@ -803,6 +810,7 @@ label {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   position: absolute; }
   .four-oh-four img {
@@ -1423,6 +1431,7 @@ label {
 
 *:not(#nav):not(.hamburger-inner):not(.modal):not(.modal-content):not(.is-selected):not(img):not(.flickity-slider):not(g):not(path) {
   -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
   transition: all 0.2s linear; }
 
 html, body {
@@ -1451,6 +1460,7 @@ ul {
         text-decoration: none;
         font-size: 15pt;
         -webkit-transition: background-color 0.3s;
+        -moz-transition: background-color 0.3s;
         transition: background-color 0.3s; }
         ul.topnav li a:hover:not(.active) {
           background-color: #eeded8; }

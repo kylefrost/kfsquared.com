@@ -40,7 +40,6 @@
 
         $sql = $sql . ') THEN 2 ELSE rsvp END;';
 
-        
         $guest_sql = '';
 
         foreach($person_ids as $person_id) {
@@ -86,6 +85,7 @@
 <div class="background">
     <div id="rsvp_center">
         <div id="rsvp_title">Your Invites</div>
+        <div style="color:white">Click the box to switch between Yes and No.</div>
         <div id="registry-divider">&nbsp;</div><br />
         <?php if($is_set_rsvp_post) { if(!$rsvp_err) { echo "<br /><div id=\"success-message\">Thank you for your RSVP.</div><br />"; } } ?>
         <form name="rsvp-form" id="rsvp-form" method="POST">
