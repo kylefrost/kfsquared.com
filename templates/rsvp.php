@@ -85,7 +85,9 @@
 <div class="background">
     <div id="rsvp_center">
         <div id="rsvp_title">Your Invites</div>
-        <div style="color:white">Click the box to switch between Yes and No.</div>
+        <div class="question">
+            Help <i id="help" onclick="helpUp()" class="fa fa-question-circle"></i>
+        </div>
         <div id="registry-divider">&nbsp;</div><br />
         <?php if($is_set_rsvp_post) { if(!$rsvp_err) { echo "<br /><div id=\"success-message\">Thank you for your RSVP.</div><br />"; } } ?>
         <form name="rsvp-form" id="rsvp-form" method="POST">
@@ -101,5 +103,17 @@
             </center>
             <input type="hidden" id="rsvp_person_ids" name="rsvp_person_ids" value="<?php $i = 0; foreach($rsvp_arr as $rsvp_row_) { echo $rsvp_row_['person_id'] . (($i < count($rsvp_arr) - 1) ? ',' : ''); $i = $i + 1; } ?>">
         </form>
+    </div>
+
+    <div id="modal" class="modal">
+        <div id="modal-content" class="modal-content">
+            <div class="modal-header">
+                <span id="close" onclick="helpDown()">&times;</span>
+                <h2>Help</h2>
+            </div>
+            <div class="modal-body">
+                <p>Click the box next to each name to switch between Yes and No. If you are using Internet Explorer, checking the box is Yes, and unchecking the box is No.</p>
+            </div>
+        </div>
     </div>
 </div>

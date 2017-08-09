@@ -41,9 +41,10 @@
     color: black
 
 .rsvp-checkbox
-  & input[type=checkbox]
+  & input[type='checkbox']
     -webkit-appearance: none
     -moz-appearance: none
+    -ms-appearance: none
     appearance: none
     border: 2px solid $registry_main_text_color
     background-color: $registry_main_text_color
@@ -66,6 +67,12 @@
 
       &:hover
         border: 2px solid white
+
+.ms-fuckyou-label
+  height: 0px
+  width: 0px
+  display: inline-block
+  position: relative
 
 #success-message
   color: white

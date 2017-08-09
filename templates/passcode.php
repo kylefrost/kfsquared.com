@@ -17,7 +17,7 @@
             </div>
         </div>
     </div>
-    <div class="question">
-        <i id="help" onclick="helpUp()" class="fa fa-question-circle"></i>
+    <div class="question" style="top:60%;">
+        Help <i id="help" onclick="helpUp()" class="fa fa-question-circle"></i>
     </div>
 </div>
